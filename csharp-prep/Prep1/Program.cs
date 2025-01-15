@@ -1,5 +1,6 @@
 using System;
 using System.Data;
+using System.Net;
 
 class Program
 {
@@ -15,7 +16,8 @@ class Program
         Console.WriteLine($"{last_name}, {first_name} {last_name}");
         */
 
-        Console.Write("What is your grade percentage?"); 
+
+        /* Console.Write("What is your grade percentage?"); 
         string grade = Console.ReadLine(); 
         int grade_perc = int.Parse(grade); 
 
@@ -61,5 +63,35 @@ class Program
         {
              Console.WriteLine("You did not pass! You got below a C"); 
         }
+        */ 
+
+        Random randomGenerator = new Random();
+        int Magic_num = randomGenerator.Next(1, 11);
+        int Guess = -3; 
+        
+        //Console.WriteLine("What is the magic number?"); 
+        //int Magic_num = int.Parse(Console.ReadLine()); 
+
+
+        while (Guess != Magic_num)
+        {
+            Console.WriteLine(" Guess a number");
+            Guess = int.Parse(Console.ReadLine());
+
+            if (Guess!> Magic_num)
+            {
+                Console.WriteLine(" To large");
+            } 
+
+            if (Guess!< Magic_num)
+            {
+                Console.WriteLine(" To small");
+            }  
+        } 
+
+
+
+
+
     }
 }
