@@ -1,6 +1,7 @@
 using System;
 using System.Data;
 using System.Net;
+using System.Numerics;
 
 class Program
 {
@@ -64,34 +65,5 @@ class Program
              Console.WriteLine("You did not pass! You got below a C"); 
         }
         */ 
-
-        Random randomGenerator = new Random();
-        int Magic_num = randomGenerator.Next(1, 11);
-        int Guess = -3; 
-        
-        //Console.WriteLine("What is the magic number?"); 
-        //int Magic_num = int.Parse(Console.ReadLine()); 
-
-
-        while (Guess != Magic_num)
-        {
-            Console.WriteLine(" Guess a number");
-            Guess = int.Parse(Console.ReadLine());
-
-            if (Guess!> Magic_num)
-            {
-                Console.WriteLine(" To large");
-            } 
-
-            if (Guess!< Magic_num)
-            {
-                Console.WriteLine(" To small");
-            }  
-        } 
-
-
-
-
-
-    }
+    } 
 }
