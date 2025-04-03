@@ -26,7 +26,7 @@ class Program
         videos.Add(video2);
         videos.Add(video3);
         
-        foreach (var video in videos)
+        foreach (Video video in videos)
         {
             video.DisplayVideoInfo();
         }

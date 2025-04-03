@@ -12,11 +12,16 @@ class Program
         order1.AddProduct(product1);
         order1.AddProduct(product2);
 
-        Console.WriteLine("Packing Label:");
+        Console.WriteLine(""); 
+        Console.WriteLine("Packing Label:"); 
         Console.WriteLine(order1.GetPackingLabel());
+        Console.WriteLine(""); 
         Console.WriteLine("Shipping Label:");
         Console.WriteLine(order1.GetShippingLabel());
+        Console.WriteLine(""); 
         Console.WriteLine("Total Cost: " + order1.GetTotalCost());
+        Console.WriteLine($"Expected to be there on {order1.Arrival(15)}"); 
+        Console.WriteLine("//////////////////////////////////////////////"); 
 
         Address address2 = new Address("456 Oak St", "Toronto", "ON", "Canada");
         Customer customer2 = new Customer("Moses Smith", address2);
@@ -28,10 +33,16 @@ class Program
         order2.AddProduct(product3);
         order2.AddProduct(product4);
 
+        Console.WriteLine(""); 
         Console.WriteLine("Packing Label:");
         Console.WriteLine(order2.GetPackingLabel());
+        Console.WriteLine(""); 
         Console.WriteLine("Shipping Label:");
         Console.WriteLine(order2.GetShippingLabel());
+        Console.WriteLine(""); 
         Console.WriteLine("Total Cost: " + order2.GetTotalCost());
+        Console.WriteLine($"Expected to be there on {order2.Arrival(10)}"); 
+        Console.WriteLine(""); 
+        Console.WriteLine("//////////////////////////////////////////////"); 
     }
 }

@@ -15,7 +15,7 @@ class Address
 
     public bool IsInUSA()
     {
-        return _country.ToLower() == "usa";
+        return _country == "USA";
     }
 
     public string GetFullAddress()

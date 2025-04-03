@@ -17,8 +17,8 @@ class Order
     public double GetTotalCost()
     {
         double totalCost = 0;
-        foreach (var product in _productsList)
-        {
+        foreach ( Product product in _productsList)
+        { 
             totalCost += product.GetTotalCost();
         }
         
@@ -38,9 +38,9 @@ class Order
     public string GetPackingLabel()
     {
         string label = "";
-        foreach (var product in _productsList)
+        foreach (Product product in _productsList)
         {
-            label += $"{product.GetName()} (ID: {product.GetProductId()})\n";
+            label += $"{product.GetName()} (ID: {product.GetProductId()})";
         }
         return label;
     }
@@ -48,5 +48,10 @@ class Order
     public string GetShippingLabel()
     {
         return $"{_customer.GetName()}\n{_customer.GetAddress().GetFullAddress()}";
+    }
+
+    public DateTime Arrival (int daysToShip)
+    {
+        return DateTime.Today.AddDays(daysToShip);
     }
 }
